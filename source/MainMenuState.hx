@@ -27,8 +27,8 @@ using StringTools;
 class MainMenuState extends MusicBeatState
 {
 	public static var nightly:String = "";
-	public static var kecVer:String = 'Kade Engine Community 1.7';
-	public static var keVer:String = "Kade Engine 1.8.1";
+	public static var kecVer:String = 'ayed engine';
+	public static var keVer:String = "Done is here now";
 	public static var curSelected:Int = 0;
 	public static var freakyPlaying:Bool;
 
@@ -36,7 +36,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 
 	#if !switch
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate', 'options'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'Discord', 'options'];
 	#else
 	var optionShit:Array<String> = ['story mode', 'freeplay'];
 	#end
@@ -51,7 +51,7 @@ class MainMenuState extends MusicBeatState
 		Paths.clearUnusedMemory();
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("he in menu ayed", null);
 		#end
 
 		ModCore.initialize();
@@ -120,6 +120,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
+			menuItem.x = 100; 
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set(0, 0.25);
 			menuItem.antialiasing = FlxG.save.data.antialiasing;
@@ -223,7 +224,7 @@ class MainMenuState extends MusicBeatState
 
 			if (FlxG.mouse.overlaps(menuItems, FlxG.camera) && FlxG.mouse.justPressed || controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				if (optionShit[curSelected] == 'Discord')
 				{
 					fancyOpenURL("https://ninja-muffin24.itch.io/funkin");
 				}
