@@ -272,7 +272,8 @@ class TitleState extends MusicBeatState
 	function addMoreText(text:String)
 	{
 		var coolText:Alphabet = new Alphabet(0, 0, text, true, false);
-		coolText.screenCenter(X);
+		//coolText.screenCenter(X);
+		coolText.x = 100;
 		coolText.y += (textGroup.length * 60) + 200;
 		credGroup.add(coolText);
 		textGroup.add(coolText);
@@ -316,8 +317,8 @@ class TitleState extends MusicBeatState
 					createCoolText(['AYED', 'EZRA TIGERYT']);
 			case 7:
 				{
-					addMoreText('ayed');
-					ngSpr.visible = true;
+					addMoreText('is done right now');
+					ngSpr.visible = false;
 				}
 			case 8:
 				deleteCoolText();
