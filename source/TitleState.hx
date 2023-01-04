@@ -311,12 +311,12 @@ class TitleState extends MusicBeatState
 				deleteCoolText();
 			case 5:
 				if (Main.watermarks)
-					createCoolText(['KE Community', 'by']);
+					createCoolText(['Ayed engine', 'by']);
 				else
-					createCoolText(['KE Community', 'by']);
+					createCoolText(['AYED', 'EZRA TIGERYT']);
 			case 7:
 				{
-					addMoreText('TheRealJake_12');
+					addMoreText('ayed');
 					ngSpr.visible = true;
 				}
 			case 8:
@@ -329,11 +329,11 @@ class TitleState extends MusicBeatState
 			case 12:
 				deleteCoolText();
 			case 13:
-				addMoreText('Friday');
+				addMoreText('vs');
 			case 14:
-				addMoreText('Night');
+				addMoreText('ayed');
 			case 15:
-				addMoreText('Funkin');
+				addMoreText('Done');
 
 			case 16:
 				skipIntro();
