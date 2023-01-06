@@ -37,7 +37,8 @@ class StoryMenuState extends MusicBeatState
 			['satin-panties', "high", "milf"],
 			['cocoa', 'eggnog', 'winter-horrorland'],
 			['senpai', 'roses', 'thorns'],
-			['ugh', 'guns', 'stress']
+			['ugh', 'guns', 'stress'],
+			['Canell.Really', 'best']
 		];
 	}
 
@@ -54,6 +55,7 @@ class StoryMenuState extends MusicBeatState
 		['parents-christmas', 'bf', 'gf'],
 		['senpai', 'bf', 'gf'],
 		['tankman', 'bf', 'gf']
+		['', 'bf', 'gf'],
 	];
 
 	var weekNames:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/weekNames'));
@@ -174,7 +176,8 @@ class StoryMenuState extends MusicBeatState
 		rankText.text = 'RANK: GREAT';
 		rankText.setFormat(Paths.font("vcr.ttf"), 32);
 		rankText.size = scoreText.size;
-		rankText.screenCenter(X);
+		rankText.x = 100;
+		//rankText.screenCenter(X);
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFF9CF51);
