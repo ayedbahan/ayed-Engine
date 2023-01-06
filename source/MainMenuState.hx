@@ -28,7 +28,7 @@ class MainMenuState extends MusicBeatState
 {
 	public static var nightly:String = "";
 	public static var kecVer:String = 'ayed engine';
-	public static var keVer:String = "Done is here now";
+	public static var keVer:String = "ayed engine is here";
 	public static var curSelected:Int = 0;
 	public static var freakyPlaying:Bool;
 
@@ -36,7 +36,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 
 	#if !switch
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'Discord', 'options'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'Youtube', 'Discord', 'options'];
 	#else
 	var optionShit:Array<String> = ['story mode', 'freeplay'];
 	#end
@@ -224,10 +224,15 @@ class MainMenuState extends MusicBeatState
 
 			if (FlxG.mouse.overlaps(menuItems, FlxG.camera) && FlxG.mouse.justPressed || controls.ACCEPT)
 			{
+				if (optionShit[curSelected] == 'Youtube')
+				{
+					fancyOpenURL("https://www.youtube.com/channel/UC70gvzhKBv10pjPfq1iL4RA");
+				}
 				if (optionShit[curSelected] == 'Discord')
 				{
-					fancyOpenURL("https://ninja-muffin24.itch.io/funkin");
+					fancyOpenURL("https://discord.gg/cjPP6Yet");
 				}
+
 				else
 				{
 					selectedSomethin = true;
